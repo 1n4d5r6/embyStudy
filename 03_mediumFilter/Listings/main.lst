@@ -1,0 +1,98 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             SORT,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000                 EXPORT           __main
+    4 00000000         __main
+    5 00000000 F04F 0007       MOV              R0,#7
+    6 00000004 4A1F            LDR              R2,=0X40000020
+    7 00000006 F04F 0901       MOV              R9,#1
+    8 0000000A F8C2 9000       STR              R9,[R2]
+    9 0000000E F04F 0902       MOV              R9,#2
+   10 00000012 F8C2 9004       STR              R9,[R2,4]
+   11 00000016 F04F 0903       MOV              R9,#3
+   12 0000001A F8C2 9008       STR              R9,[R2,8]
+   13 0000001E F04F 0904       MOV              R9,#4
+   14 00000022 F8C2 900C       STR              R9,[R2,12]
+   15 00000026 F04F 0905       MOV              R9,#5
+   16 0000002A F8C2 9010       STR              R9,[R2,16]
+   17 0000002E F04F 0906       MOV              R9,#6
+   18 00000032 F8C2 9014       STR              R9,[R2,20]
+   19 00000036 F04F 0907       MOV              R9,#7
+   20 0000003A F8C2 9018       STR              R9,[R2,24]
+   21 0000003E F1A0 0101       SUB              R1,R0,#1
+   22 00000042 F04F 0404       MOV              R4,#4
+   23 00000046 FB01 2304       MLA              R3,R1,R4,R2
+   24 0000004A F1A3 0404       SUB              R4,R3,#4
+   25 0000004E         LOOP1
+   26 0000004E F102 0504       ADD              R5,R2,#4
+   27 00000052         LOOP2
+   28 00000052 6816            LDR              R6,[R2]
+   29 00000054 682F            LDR              R7,[R5]
+   30 00000056 42BE            CMP              R6,R7
+   31 00000058 BF84 602E       STRHI            R6,[R5]
+   32 0000005C 6017            STRHI            R7,[R2]
+   33 0000005E F105 0504       ADD              R5,R5,#4
+   34 00000062 429D            CMP              R5,R3
+   35 00000064 D9F5            BLS              LOOP2
+   36 00000066 F102 0204       ADD              R2,R2,#4
+   37 0000006A 42A2            CMP              R2,R4
+   38 0000006C D9EF            BLS              LOOP1
+   39 0000006E 4A05            LDR              R2,=0X40000020
+   40 00000070 EA4F 0050       MOV              R0,R0,LSR #1
+   41 00000074 F04F 0404       MOV              R4,#4
+   42 00000078 FB00 2304       MLA              R3,R0,R4,R2
+   43 0000007C 6819            LDR              R1,[R3]
+   44 0000007E F04F 0064       MOV              R0,#100
+   45 00000082                 END
+              00 00 40000020 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\main.d -o.\objects\main.o -I.\RTE\Device\STM32F103VE -I.
+\RTE\_Target_1 -ID:\stm32_soft\stm32_keil5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\
+Include -ID:\stm32_soft\stm32_keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\In
+clude --predefine="__UVISION_VERSION SETA 526" --predefine="_RTE_ SETA 1" --pre
+define="STM32F10X_HD SETA 1" --list=.\listings\main.lst main.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP1 0000004E
+
+Symbol: LOOP1
+   Definitions
+      At line 25 in file main.s
+   Uses
+      At line 38 in file main.s
+Comment: LOOP1 used once
+LOOP2 00000052
+
+Symbol: LOOP2
+   Definitions
+      At line 27 in file main.s
+   Uses
+      At line 35 in file main.s
+Comment: LOOP2 used once
+SORT 00000000
+
+Symbol: SORT
+   Definitions
+      At line 1 in file main.s
+   Uses
+      None
+Comment: SORT unused
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 4 in file main.s
+   Uses
+      At line 3 in file main.s
+Comment: __main used once
+4 symbols
+339 symbols in table

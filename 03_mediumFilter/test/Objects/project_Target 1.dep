@@ -1,0 +1,2 @@
+Dependencies for Project 'project', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.s)(0x633EE7EB)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Target_1-ID:\stm32_soft\stm32_keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-ID:\stm32_soft\stm32_keil5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 526" --pd "STM32F10X_HD SETA 1"--list .\listings\main.lst --xref -o .\objects\main.o --depend .\objects\main.d)
