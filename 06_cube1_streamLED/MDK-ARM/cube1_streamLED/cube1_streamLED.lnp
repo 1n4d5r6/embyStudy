@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"cube1_streamled\startup_stm32f103xb.o"
+"cube1_streamled\main.o"
+"cube1_streamled\gpio.o"
+"cube1_streamled\stm32f1xx_it.o"
+"cube1_streamled\stm32f1xx_hal_msp.o"
+"cube1_streamled\stm32f1xx_hal_gpio_ex.o"
+"cube1_streamled\stm32f1xx_hal_tim.o"
+"cube1_streamled\stm32f1xx_hal_tim_ex.o"
+"cube1_streamled\stm32f1xx_hal.o"
+"cube1_streamled\stm32f1xx_hal_rcc.o"
+"cube1_streamled\stm32f1xx_hal_rcc_ex.o"
+"cube1_streamled\stm32f1xx_hal_gpio.o"
+"cube1_streamled\stm32f1xx_hal_dma.o"
+"cube1_streamled\stm32f1xx_hal_cortex.o"
+"cube1_streamled\stm32f1xx_hal_pwr.o"
+"cube1_streamled\stm32f1xx_hal_flash.o"
+"cube1_streamled\stm32f1xx_hal_flash_ex.o"
+"cube1_streamled\stm32f1xx_hal_exti.o"
+"cube1_streamled\system_stm32f1xx.o"
+--strict --scatter "cube1_streamLED\cube1_streamLED.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "cube1_streamLED.map" -o cube1_streamLED\cube1_streamLED.axf
