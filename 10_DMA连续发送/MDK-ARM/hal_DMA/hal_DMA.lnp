@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"hal_dma\startup_stm32f103xb.o"
+"hal_dma\main.o"
+"hal_dma\gpio.o"
+"hal_dma\dma.o"
+"hal_dma\usart.o"
+"hal_dma\stm32f1xx_it.o"
+"hal_dma\stm32f1xx_hal_msp.o"
+"hal_dma\stm32f1xx_hal_gpio_ex.o"
+"hal_dma\stm32f1xx_hal_tim.o"
+"hal_dma\stm32f1xx_hal_tim_ex.o"
+"hal_dma\stm32f1xx_hal_uart.o"
+"hal_dma\stm32f1xx_hal.o"
+"hal_dma\stm32f1xx_hal_rcc.o"
+"hal_dma\stm32f1xx_hal_rcc_ex.o"
+"hal_dma\stm32f1xx_hal_gpio.o"
+"hal_dma\stm32f1xx_hal_dma.o"
+"hal_dma\stm32f1xx_hal_cortex.o"
+"hal_dma\stm32f1xx_hal_pwr.o"
+"hal_dma\stm32f1xx_hal_flash.o"
+"hal_dma\stm32f1xx_hal_flash_ex.o"
+"hal_dma\stm32f1xx_hal_exti.o"
+"hal_dma\system_stm32f1xx.o"
+--strict --scatter "hal_DMA\hal_DMA.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "hal_DMA.map" -o hal_DMA\hal_DMA.axf
