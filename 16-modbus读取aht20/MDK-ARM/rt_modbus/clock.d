@@ -1,0 +1,10 @@
+rt_modbus\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/src/clock.c
+rt_modbus\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rthw.h
+rt_modbus\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtthread.h
+rt_modbus\clock.o: ../RT-Thread/rtconfig.h
+rt_modbus\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_config.h
+rt_modbus\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdebug.h
+rt_modbus\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtdef.h
+rt_modbus\clock.o: D:\stm32_soft\stm32_keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+rt_modbus\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/include/rtservice.h
+rt_modbus\clock.o: ../Middlewares/Third_Party/RealThread_RTOS/finsh/finsh_api.h

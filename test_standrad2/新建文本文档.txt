@@ -1,0 +1,5 @@
+1、新建项目，在项目中创建USER,CMSIS,DOC,FWLB,STARTUP文件夹
+2、将上面这些文件夹中的东西复制到项目中对应文件夹中
+3、MDK5中，将各自文件夹中的.c文件加入项目
+4、STARTUP文件夹，将对应芯片的启动文件加入项目
+5、在魔术棒配置卡的c/c++中，define栏写入USE_STDPERIPH_DRIVER,STM32F10X_HD，include path填入本项目中所有有.h文件的路径

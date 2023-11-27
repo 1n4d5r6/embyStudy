@@ -1,0 +1,13 @@
+1、新建项目，在项目中创建USER,CMSIS,DOC,FWLB,STARTUP文件夹
+2、在项目路径下复制本文件夹所有东西到项目路径下
+3、MDK5中，将各自文件夹中的.c文件加入项目
+4、STARTUP文件夹，将对应芯片的启动文件加入项目
+5、在魔术棒配置卡的c/c++中，define栏写入USE_STDPERIPH_DRIVER,STM32F10X_HD，include path填入本项目中
+      所有有.h文件的路径
+
+
+配置：
+1、魔术棒Target勾选Use MicrolLIB
+2、OutPut 三个勾全部选上
+3、如果上面define写了之后，报了好几十个同样的错误：“不应该有}”类似的错误，就把define里面把STM32F10X_XD去掉
+
